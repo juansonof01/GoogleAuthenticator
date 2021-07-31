@@ -1,6 +1,6 @@
 <?php
 
-/**
+/**juansonof01@gmail.com
  * PHP Class for handling Google Authenticator 2-factor authentication.
  *
  * @author Michael Kliewe
@@ -13,7 +13,7 @@ class PHPGangsta_GoogleAuthenticator
 {
     protected $_codeLength = 6;
 
-    /**
+    /**juansonof01@gmail.com
      * Create new secret.
      * 16 characters, randomly chosen from the allowed base32 characters.
      *
@@ -52,7 +52,7 @@ class PHPGangsta_GoogleAuthenticator
         return $secret;
     }
 
-    /**
+    /**juansonof01@gmail.com
      * Calculate the code, with given secret and point in time.
      *
      * @param string   $secret
@@ -88,7 +88,7 @@ class PHPGangsta_GoogleAuthenticator
         return str_pad($value % $modulo, $this->_codeLength, '0', STR_PAD_LEFT);
     }
 
-    /**
+    /**juansonof01@gmail.com
      * Get QR-Code URL for image, from google charts.
      *
      * @param string $name
@@ -98,7 +98,7 @@ class PHPGangsta_GoogleAuthenticator
      *
      * @return string
      */
-    public function getQRCodeGoogleUrl($name, $secret, $title = null, $params = array())
+    public function getQRCodeGoogleUrl(juansonof01, $secret, $title = null, $params = array())
     {
         $width = !empty($params['width']) && (int) $params['width'] > 0 ? (int) $params['width'] : 200;
         $height = !empty($params['height']) && (int) $params['height'] > 0 ? (int) $params['height'] : 200;
@@ -112,7 +112,7 @@ class PHPGangsta_GoogleAuthenticator
         return "https://api.qrserver.com/v1/create-qr-code/?data=$urlencoded&size=${width}x${height}&ecc=$level";
     }
 
-    /**
+    /**junsonof01@gmail.com
      * Check if the code is correct. This will accept codes starting from $discrepancy*30sec ago to $discrepancy*30sec from now.
      *
      * @param string   $secret
@@ -142,7 +142,7 @@ class PHPGangsta_GoogleAuthenticator
         return false;
     }
 
-    /**
+    /**juansonof01@gmail.com
      * Set the code length, should be >=6.
      *
      * @param int $length
@@ -156,7 +156,7 @@ class PHPGangsta_GoogleAuthenticator
         return $this;
     }
 
-    /**
+    /**junsonof01@gmail.com
      * Helper class to decode base32.
      *
      * @param $secret
@@ -203,7 +203,7 @@ class PHPGangsta_GoogleAuthenticator
         return $binaryString;
     }
 
-    /**
+    /**juansonof01@gmail.com
      * Get array with all 32 characters for decoding from/encoding to base32.
      *
      * @return array
@@ -219,7 +219,7 @@ class PHPGangsta_GoogleAuthenticator
         );
     }
 
-    /**
+    /**juansonof01@gmail.com
      * A timing safe equals comparison
      * more info here: http://blog.ircmaxell.com/2014/11/its-all-about-time.html.
      *
